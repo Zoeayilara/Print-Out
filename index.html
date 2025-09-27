@@ -11,21 +11,6 @@
     }
     </script>
     <style>
-        /* *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            margin-top: 10px;
-        }
-        .thefold {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            color: blue;
-            gap: 50px;
-            /* box-shadow: 1px 0px 2px; */
-
-
          :root{
     --bg-white: #fff;
     --blue: #0f78c8; /* heading blue */
@@ -55,6 +40,7 @@
    /* card */
   .poster{
     width: min(96%, var(--paper-width));
+    margin: 0 auto;
     background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     border-radius: 6px;
@@ -64,6 +50,66 @@
     box-sizing: border-box;
   }
 
+  /* Print button styles */
+  .print-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .print-button:hover {
+    background-color: #0962a3;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    body {
+      padding: 16px;
+    }
+    .poster {
+      padding: 24px;
+    }
+    .signature-row {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .sig-block {
+      flex: 1 1 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding: 12px;
+    }
+    .poster {
+      padding: 16px;
+    }
+    :root {
+      --paper-padding: 16px;
+    }
+  }
+
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+    }
+    .poster {
+      box-shadow: none;
+      padding: 0;
+    }
+    .print-button {
+      display: none;
+    }
+  }
+
   /* faint flag watermark using SVG repeated stars and a pale red stripe */
   .poster::before{
     content: "";
@@ -71,7 +117,8 @@
     inset: 0;
     background-image:
       radial-gradient(circle at 10% 20%, rgba(255,255,255,0.75), rgba(255,255,255,0.85) 20%),
-      linear-gradient(90deg, rgba(179,34,52,0.06) 0%, rgba(179,34,52,0.02) 100%);pointer-events: none;
+      linear-gradient(90deg, rgba(179,34,52,0.06) 0%, rgba(179,34,52,0.02) 100%);
+    pointer-events: none;
     mix-blend-mode: multiply;
   }
  /* header */
@@ -188,22 +235,21 @@
     margin-top: 18px;
     font-weight:700;
     font-size:13px;
-    color: #111;
+    color: var(--dark);
     text-align:left;
   }
 
   /* Print button styles */
   .print-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #0f78c8;
+    background-color: var(--blue);
     color: white;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    z-index: 1000;
+    border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
   .print-button:hover {
@@ -238,22 +284,9 @@
     .sig-block{ width:100%; }
   }
 
-
-
-
-
-
-
-
-        
-
-
-
     </style>
 </head>
 <body>
-    <div class="print-button" onclick="printDocument()">Print/Download as PDF</div>
-    
     <article class="poster" role="document" aria-label="Department of Defense Leave Request (replica)">
 
         
@@ -311,9 +344,6 @@
 
 </article>
 
-
-
-
-
+<button onclick="printDocument()" class="print-button">Print/Download as PDF</button>
 </body>
 </html>
