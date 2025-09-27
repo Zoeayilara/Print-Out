@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Defense Leave Request Form</title>
+    <meta name="description" content="Department of Defense Leave Request Form - Downloadable Version">
+    <script>
+    function printDocument() {
+        window.print();
+    }
+    </script>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        .thefold {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            color: blue;
+            gap: 50px;
+            /* box-shadow: 1px 0px 2px; */
+
+
+         :root{
+    --bg-white: #fff;
+    --blue: #0f78c8; /* heading blue */
+    --dark: #111;
+    --muted: rgba(0,0,0,0.65);
+    --paper-width: 880px;
+    --paper-padding: 36px;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,#e9eef6 0%, #f7f7f9 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .creamy {
+    display: flex;
+    text-align: center;
+    justify-self: center;
+    width: 3.5rem;
+  }
+   /* card */
+  .poster{
+    width: min(96%, var(--paper-width));
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    padding: var(--paper-padding);
+    box-sizing: border-box;
+  }
+
+  /* faint flag watermark using SVG repeated stars and a pale red stripe */
+  .poster::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(255,255,255,0.75), rgba(255,255,255,0.85) 20%),
+      linear-gradient(90deg, rgba(179,34,52,0.06) 0%, rgba(179,34,52,0.02) 100%);pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+ /* header */
+  .seal{
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    margin: 6px auto 8px;
+    display:block;
+    background: url('seal.png') center/contain no-repeat; /* replace seal.png with your image */
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+  }
+
+  .title{
+    text-align:center;
+    margin: 0 0 6px;
+  }
+  .title h1{
+    margin:0;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+    font-size: 56px;
+    color: rgb(31, 117, 246);
+    line-height: 0.88;
+  }
+
+   .subtitle{
+    text-align:center;
+    margin: 8px 0 18px;
+  }
+  .subtitle .country{
+    font-weight:700;
+    font-size:18px;
+    color: #111;
+    letter-spacing: .6px;
+  }
+  .subtitle .country-sub{
+    display:block;
+    font-size:13px;
+    color: var(--muted);
+    margin-top:4px;
+  }
+  /* section header */
+  .section-title{
+    margin: 20px 0 10px;
+    text-align:center;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing: .6px;
+  }
+  .section-title small{
+    display:block;
+    font-weight:400;
+    font-size:12px;
+    color:var(--muted);
+    margin-top:6px;
+  }
+
+ /* numbered policy area */
+  .policy{
+    margin-top:12px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .policy ol{
+    padding-left: 22px;
+    margin: 0;
+  }
+  .policy li{
+    margin-bottom: 12px;
+    line-height: 1.45;
+  }
+/* signature area */
+  .signature-row{
+    display:flex;
+    justify-content:space-between;
+    margin-top: 28px;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .sig-block{
+    flex: 1 1 40%;
+  }
+  .sig-line{
+    border-top: 1px dashed rgba(0,0,0,0.25);
+    padding-top:8px;
+    text-align:center;
+    font-size:13px;
+    color:var(--muted);
+  }
+ /* cert officer sign (green scribble look) */
+  .cert{
+    text-align:center;
+  }
+  /* .cert .green-sign{
+    display:inline-block;
+    font-family: "Oswald", sans-serif;
+    font-weight:700;
+    color: #178a3e;
+    transform: rotate(-3deg);
+    font-size:34px;
+    margin-bottom:6px;
+  } */
+  .cert .rank{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    color:#222;
+    margin-top:4px;
+  }
+
+   /* footer small */
+  .certify-text{
+    margin-top: 18px;
+    font-weight:700;
+    font-size:13px;
+    color: #111;
+    text-align:left;
+  }
+
+  /* Print button styles */
+  .print-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0f78c8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .print-button:hover {
+    background-color: #0962a3;
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+    .poster {
+      box-shadow: none;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 20px;
+    }
+    .print-button {
+      display: none;
+    }
+  }
+
+  /* responsive */
+  @media (max-width:640px){
+    .title h1{ font-size:36px; }
+    .seal{ width:64px; height:64px; }
+    .policy li{ font-size:13px; }
+    .signature-row{ flex-direction:column; align-items:flex-start; gap:12px; }
+    .sig-block{ width:100%; }
+  }
+
+
+
+
+
+
+
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="print-button" onclick="printDocument()">Print/Download as PDF</div>
+    
+    <article class="poster" role="document" aria-label="Department of Defense Leave Request (replica)">
+
+        
+
+  <!-- top seal -->
+  <div class="seal" aria-hidden="true"></div>
+<img src="../multimedia/image/cream.jpg" class="creamy" alt="">
+  <!-- big heading -->
+  <header class="title" role="banner">
+    <h1>DEPARTMENT OF DEFENSE</h1>
+  </header>
+
+  <!-- country subtitle -->
+  <div class="subtitle" role="note">
+    <div class="country">UNITED STATES OF AMERICA</div>
+    <div class="country-sub">UNITED STATES OF AMERICA</div>
+  </div>
+<!-- policy/instruction heading -->
+  <div class="section-title">
+    POLICY AND INSTRUCTION FOR LEAVE REQUEST
+    <small>FORM 30 07/80MN</small>
+  </div>
+
+  <!-- numbered policy text -->
+  <section class="policy" aria-labelledby="policy-heading">
+    <ol>
+      <li>Returning officer request for leave request should have a reasonable motive of applying for leave request.</li>
+      <li>Experience has shown that vacations and short period of rest from duty, as well as authorized absence to attend to emergency situation at home, therefore, every soldier who either eligible for leave are not eligible for leave are not authorized to request for leave by themself.</li>
+       <li>Returning officer applying for leave of request will be liable to receive some amount of money leave bonuses and this will be claim by his/her beneficiary.</li>
+      <li>Short period of leave can be requested for a soldier by his or her spouse, family immediate or extended with genuine reasons.</li>
+      <li>Maximum of leave period to be given to a soldier on deployment is three months.</li>
+      <li>All soldier leaving the camp on a family of spouse request should have a liberty pass card shall surface to identify a service number on the authorized absence not classified as leave.</li>
+      <li>Paid leave should be only granted to soldier who are eligible for leave, unpaid leave to the non-eligible soldiers under any kind of condition.</li>
+      <li>Returning officer will be liable to leave to his designed country 72hours after all processing is completed.</li>
+      <li>On no account should a third party intervene with the whole processing.</li>
+    </ol>
+  </section>
+
+  <div class="certify-text">I CERTIFY THAT I AGREE WITH THE WHOLE POLICY AND INSTRUCTION TO THE LEAVE REQUEST FOR THE RETURNING OFFICER</div>
+
+<!-- signature area -->
+  <div class="signature-row">
+    <div class="sig-block">
+      <div class="sig-line">BENEFICIARY'S SIGNATURE</div>
+    </div>
+
+    <div class="sig-block cert" aria-label="Certifying officer sign">
+      <!-- <div class="green-sign">B. Thomas</div> -->
+      <div class="rank">SGT. THOMAS STALTZ</div>
+      <div class="sig-line" style="border-top: none; margin-top: 8px; color: var(--muted); font-size:11px;">
+        CERTIFYING OFFICER SIGN
+      </div>
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+</body>
+</html>
